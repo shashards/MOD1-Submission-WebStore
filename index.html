@@ -1,0 +1,122 @@
+<html>
+<head>
+  <title>
+    Clothing Request
+  </title>
+</head>
+<body>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <nav class="navbar fixed-top navbar-light bg-light d-flex justify-content-between">
+      <h5 class="my-0 font-weight-normal">KitList <i class="fa fa-fighter-jet"></i></h5>
+      <div id="cart-alert-parent" class="container d-flex justify-content-center">
+        <div id="cart-alert" class="alert alert-success" role="alert">
+          Added to Your Cart!
+        </div>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a id="cart-button" class="nav-link" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-shopping-cart fa-2x"></i><span id="cart-total-page" class="badge badge-pill badge-danger">0</span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- start of cart -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="container">
+            <h5 class="row justify-content-center modal-title">Your Clothing Request Cart</h5>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="cart" class="modal-body">
+          <!-- start of cart item -->
+          <!-- <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                  <img src="https://www.aalforum.eu/wp-content/uploads/2016/04/profile-placeholder.png" class="img-fluid rounded-circle" id="item-img" alt="">
+                  <div class="item-text">
+                    <p id="cart-item-title" class="font-weight-bold mb-0">Product</p>
+                    <span class="text-muted">NSN</span>
+                    <span id="cart-item-NSN" class="cart-item-NSN text-muted" class="mb-0">0000.00.0000.00</span>
+                  </div>
+                  <a class="cart-item-remove nav-link">
+                    X
+                  </a>
+                </div> -->
+          <!--end of  cart item -->
+        </div>
+        <!-- cart total -->
+        <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+          <h5> Qty <strong id="cart-total" class="badge badge-pill badge-danger">0</strong> </h5>
+        </div>
+        <!--end cart total -->
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="modal-footer">
+              <button id="clear-cart" type="button" class="btn btn-outline-danger">Empty Cart</button>
+              <button type="button" class="btn btn-outline-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of cart -->
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">KitList</h1>
+    <p class="lead">Quickly request Kit and Equipment.</p>
+  </div>
+  <div class="container">
+    <div class="container">
+      <div id="myBtnContainer" class="mb-2">
+        <button class="btn btn-light active" onclick="filterSelection('all')"> Show All</button>
+        <button class="btn btn-light" onclick="filterSelection('top')"> Top</button>
+        <button class="btn btn-light" onclick="filterSelection('bottom')"> Bottom</button>
+        <button class="btn btn-light" onclick="filterSelection('accessory')"> Accessories</button>
+      </div>
+    </div>
+    <div id="productrow" class="card-deck text-center">
+      <!-- <div class="card mb-4" style="min-width: 18rem;">
+            <img id="productimg" src="https://www.aalforum.eu/wp-content/uploads/2016/04/profile-placeholder.png" class="card-img-top w-50 mx-auto d-block">
+            <div class="card-body">
+              <h5 id="title" class="card-title">Product</h5>
+              <p id="description"12 class="card-text">Product Description.</p>
+              <p id="NSN" class="text-muted">0000-00-0000-00</p>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary addcart">Add to Cart</button>
+            </div>
+          </div>                   -->
+    </div>
+    <footer class="pt-4 my-md-5 pt-md-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <i class="fa fa-fighter-jet fa-2x"></i>
+          <small class="d-block mb-3 text-muted">© 2020</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Information</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Equipment Scales</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
